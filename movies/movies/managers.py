@@ -52,8 +52,8 @@ class PersonManager(models.Manager):
     def add_movie_as_director(self, instance, data):
         from .models import Movie
         with transaction.atomic():
-            for movie in data["movies"]:
-                mv = get_instance(Movie, title=movie["title"], release_year=movie["release_year"])
+            for movie in data["movies_as_director"]:
+                mv = get_instance(Movie, id=movie["id"])
                 if mv:
                     instance.movies_as_director.add(mv)
         return instance
@@ -68,8 +68,8 @@ class PersonManager(models.Manager):
     def add_movie_as_producer(self, instance, data):
         from .models import Movie
         with transaction.atomic():
-            for movie in data["movies"]:
-                mv = get_instance(Movie, title=movie["title"], release_year=movie["release_year"])
+            for movie in data["movies_as_producer"]:
+                mv = get_instance(Movie, id=movie["id"])
                 if mv:
                     instance.movies_as_producer.add(mv)
         return instance
@@ -84,8 +84,8 @@ class PersonManager(models.Manager):
     def add_movie_as_casting(self, instance, data):
         from .models import Movie
         with transaction.atomic():
-            for movie in data["movies"]:
-                mv = get_instance(Movie, title=movie["title"], release_year=movie["release_year"])
+            for movie in data["movies_as_casting"]:
+                mv = get_instance(Movie, id=movie["id"])
                 if mv:
                     instance.movies_as_casting.add(mv)
         return instance
