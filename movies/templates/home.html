@@ -1,0 +1,54 @@
+{% load i18n static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Movies API</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" >
+  <meta name="description" content="Movies API REST">
+  <meta name="author" description="Lenin Hernández">
+
+  <link href="https://fonts.googleapis.com/css?family=Oswald:400,300,700|EB+Garamond" rel="stylesheet">
+  <link href="{% static 'movies/lib/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+  <link href="{% static 'movies/lib/font-awesome/css/font-awesome.min.css' %}" rel="stylesheet">
+  <link href="{% static 'movies/css/style.css' %}" rel="stylesheet">
+
+</head>
+
+<body data-spy="scroll" data-offset="0" data-target="#theMenu">
+
+  <section id="home" name="home"></section>
+  <div id="headerwrap">
+    <div class="container">
+      
+      <div class="row">
+        <h1>MOVIE API REST</h1>
+        <br>
+        <h3>Documentation</h3>
+        <ul>
+          <li><a href="{% url 'schema-swagger-ui'%}"><strong>Swagger</strong></a></li>
+          <li><a href="{% url 'schema-redoc' %}"><strong>Open API</strong></a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div id="copyrights">
+    <div class="container">
+      <p>
+        &copy; Copyrights <strong>Minimal</strong>. All Rights Reserved
+      </p>
+      <div class="credits">
+        Created with Minimal template by <a href="https://templatemag.com/">TemplateMag</a>
+      </div>
+    </div>
+  </div>
+
+  <script src="{% static 'movies/lib/jquery/jquery.min.js' %}"></script>
+  <script src="{% static 'movies/lib/easing/easing.min.js' %}"></script>
+
+  <script src="{% static 'movies/js/main.js' %}"></script>
+
+</body>
+</html>
