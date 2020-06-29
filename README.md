@@ -13,8 +13,9 @@ A django REST API using
 
 ## Documentation
 
-<a href="http://movies.hvz.io/api/v1/">Movies</a>
+<a href="http://movies.hvz.io/api/v1/">Movies</a> Live API documentation
 
+## TEST USER
 user:  test
 <br/>
 password: pruebas123
